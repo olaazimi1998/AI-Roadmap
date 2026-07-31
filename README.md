@@ -1,32 +1,55 @@
-# Week 1: Object-Oriented Programming (OOP)
+# AI Roadmap: Week 1 — Object-Oriented Programming
 
-This week focuses on the core ideas of object-oriented programming.
-You will learn how to design programs using objects, group related data with behavior, and build reusable code.
+Welcome to the Week 1 OOP learning path. This repository contains hands-on Python examples that illustrate the core object-oriented programming principles through simple exercises and models.
 
-## What you will learn
+## Repository structure
 
-- **Classes** — the blueprints for creating objects and defining shared behavior.
-- **Encapsulation** — keeping data and methods together inside objects for better control and safety.
-- **Properties** — object values that describe state and can be accessed or updated cleanly.
-- **Getters** — special methods used to read object properties in a controlled way.
-- **Setters** — special methods used to update object properties while enforcing rules.
-- **Inheritance** — letting one class reuse and extend another class’s behavior.
-- **Polymorphism** — using the same interface for different object types so code stays flexible.
-- **Abstraction** — hiding complexity and exposing only the essential features of objects.
+- `week 1/day1/` — introductory classes and objects
+- `week 1/day2/` — encapsulation, getters, and setters
+- `week 1/day3/` — (work in progress)
+- `week 1/day4/` — bank and employee models using OOP design
+- `week 1/day5/` — abstract classes, payment systems, and ML model interfaces
+- `week 1/day6/` — bank account inheritance and account types
 
-## Why these concepts matter
+## What you will learn this week
 
-Together, these concepts help you write code that is easier to maintain, extend, and understand.
-OOP encourages thinking in terms of real-world models, which makes complex programs simpler to organize.
+- **Classes** — define reusable object blueprints.
+- **Objects** — create instances that store state and behavior.
+- **Encapsulation** — keep data and methods together for safer code.
+- **Inheritance** — extend existing classes without duplicating logic.
+- **Polymorphism** — use the same method names across different object types.
+- **Abstraction** — hide implementation details behind a clean interface.
+- **Abstract base classes** — define shared contracts for subclasses.
 
-## Recommended practice
+## Highlights from Day 5
 
-1. Start by defining a few simple classes.
-2. Add properties to store values and use getters/setters for safe access.
-3. Group related behavior inside methods.
-4. Use inheritance only when it makes sense, to avoid duplicated code.
-5. Practice polymorphism with different objects that share the same method names.
-6. Keep your design focused on the important details, and hide the rest with abstraction.
+In `week 1/day5/`, the code demonstrates:
+
+- `Book` and `Math` classes with a shared `study()` method.
+- `Payment`, `Paypal`, and `Creditcard` abstract payment implementations.
+- `MLModel`, `LinearRegression`, and `DecisionTree` abstract training and prediction interfaces.
+
+This shows how OOP helps organize different systems with consistent behavior.
+
+## How to use this repository
+
+1. Open the folder for the day you want to explore.
+2. Read the Python files to understand the class design.
+3. Run the `main.py` script for that day to see the output.
+4. Modify or extend the examples to practice your own OOP designs.
+
+## Recommended workflow
+
+1. Start with the simplest example in `day1`.
+2. Follow the progression through `day4`, `day5`, and `day6`.
+3. Compare implementations across days to spot patterns.
+4. Add a new class or subclass to reinforce the concepts.
+
+## Notes
+
+- This repository is a practical introduction to OOP in Python.
+- It is designed for learners who want to build real programs with clear structure.
+- Each day contains a small, self-contained example that highlights one or more OOP concepts.
 
 
 
