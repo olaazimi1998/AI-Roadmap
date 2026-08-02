@@ -89,7 +89,7 @@ odds = [x for x in range(20) if x % 2 != 0 ]
 print(odds)
 
 scores = [20, 50, 69, 90, 79, 78]
-results = [len(scores) for score in scores ]
+results = [len(scores) for score in scores ] # type: ignore
 print(results)
 
 # use if else in list comperhencive
@@ -182,15 +182,19 @@ lists = [name.strip() for name in names]
 print(lists)
 
 #cleaning data
-data = [None, 10, -8, 8, None]
-clean = [x for x in data if x is not None and x >= 0]
-print(clean)
+data = [None, 10, -8, 8, None] # type: ignore
+clean = [x for x in data if x is not None and x >= 0] # type: ignore
+print(clean) # type: ignore
 
 
 #prepare for machine learning
 predictions = [0.3, 0.5, 0.6, 0.1]
 classes = [1 if p >= 0.4 else 0 for p in predictions ]
 print(classes)
+
+numbers = [2, 4, 6, 8]
+lists = [i ** 3 for i in numbers]
+print(lists)
 
 
 
