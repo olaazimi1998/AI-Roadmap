@@ -94,8 +94,29 @@ for line in read_file("week2/day3/number.txt"):
 
 
 
+def csv_reader(file_name):
+    with open(file_name) as file:
+        for row in file:
+            yield row.strip().split(",")
 
 
+for row in csv_reader("week2/day3/dataset.csv"):
+    print(row)
+
+def csv_reader(file_name):
+    with open(file_name) as file:
+        
+
+            first_line = next(file)
+            second_line = next(file)
+
+            yield first_line, second_line.strip().split(",")
+
+
+for row in csv_reader("week2/day3/dataset.csv"):
+    print(row)
+
+    
 
 
 
