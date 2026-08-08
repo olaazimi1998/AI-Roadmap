@@ -141,6 +141,57 @@ numbers = np.linspace(0, 100, 6)
 print(numbers)
 
 
+#example
+
+
+import numpy as np
+
+temp = np.array([1,2,4,6,8,0,8,6,4,3,2,56,78,45,34])
+print(temp)
+print(numbers.shape)
+print(numbers.ndim)
+print(numbers.size)
+print(numbers.dtype)
+print(numbers[0])
+print(numbers[0:])
+print(numbers[0:4])
+print(numbers[2:])
+print(numbers[0:10:4])
+print(numbers[0:8])
+
+numbers = np.arange(0, 100, 10)
+print(numbers)
+
+
+numbers = np.linspace(0, 100, 5)
+print(numbers)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
