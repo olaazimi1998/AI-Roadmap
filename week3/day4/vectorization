@@ -1,0 +1,44 @@
+import numpy as np
+
+numbers = np.array([2, 4, 6, 8, 10])
+result = numbers * 3
+print(result)
+# Multiply every number by 3
+
+numbers = np.array([10,20,30,40,50,60,70])
+result = 5 + numbers
+print(result)
+
+
+import numpy as np
+
+a = np.array([1, 2, 3, 4])
+b = np.array([10, 20, 30, 40])
+
+print(a + b)
+
+#exercise
+import numpy as np
+
+matrix = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+
+print(matrix * 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
