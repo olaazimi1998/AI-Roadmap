@@ -8,13 +8,13 @@ numbers = pd.Series([20,30,40,50,80])
 print(numbers)
 
 #  DataFrame is like a table excel file
-data = {
+data = { # type: ignore
     "name": ["sara", "ali", "amir" ] , 
     "age": [20, 39, 40], 
     "score": [90, 88, 78]
 }
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data) # type: ignore
 print(df)
 
 #show two row of first
@@ -35,7 +35,7 @@ print(df.columns)
 #number of row and column :
 print(df.shape)
 
-print(pd.DataFrame(data))
+print(pd.DataFrame(data)) # type: ignore
 
 print(df.head(1))
 print(df.tail(2))
