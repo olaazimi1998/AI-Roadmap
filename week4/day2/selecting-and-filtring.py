@@ -46,7 +46,7 @@ data = { # type: ignore
     }
 
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data) # type: ignore
 print(df)
 
 print([df["age"] > 30])
@@ -92,14 +92,14 @@ result = df.loc[
 print(result)
 
 
-data = {
+data = { # type: ignore
     "name": ["sara", "ali", "ahmed", "abidin"],
     "age": [20, 30, 40, 50],
     "city": ["paris","brazel", "japan", "dubai"],
     "score": [60, 70, 50, 90]
 }
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data) # type: ignore
 print(df)
 print(df["name"])
 print("\n")
