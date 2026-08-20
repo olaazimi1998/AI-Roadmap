@@ -1,10 +1,10 @@
--****#Function
+#Function
         #↓
 #D ecorator
        # ↓
 # Function 
 #its too long
-def hello():
+def hello(): # type: ignore
     print("hello world")
 
 print("before")
@@ -13,14 +13,14 @@ print("after")
 
 
 #decorator
-def decorator(func):
+def decorator(func): # type: ignore
     def wrapper():
         print("before")
         func()
         print("after")
     return wrapper
 
-def hello():
+def hello(): # type: ignore
     print("hello world")
 
 hello = decorator(hello)
@@ -34,20 +34,22 @@ hello()
 
 print("-----------")
 
-def decorator(func):
-    def wrapper(*args, **kwargs):
+def decorator(func): # type: ignore
+    def wrapper(*args, **kwargs): # type: ignore
         print("before")
-        result = func(*args, **kwargs)
+        result = func(*args, **kwargs) # type: ignore
         print("after")
-        return result
-    return wrapper
+        return 
+
+
+    return wrapper # type: ignore
 @decorator
-def multiply(a, b):
-    return a * b
-print(multiply(8, 9))
+def multiply(a, b): # type: ignore
+    return a * b # type: ignore
+print(multiply(8, 9)) # type: ignore
 
 
-def decorator(func):
+def decorator(func): # type: ignore
     def wrapper(*args, **kwargs):
         print("before")
         result = func(*args, **kwargs)

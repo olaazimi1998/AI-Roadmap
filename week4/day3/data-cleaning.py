@@ -230,3 +230,72 @@ df["name"].str.lower()
 
 # Uppercase
 df["name"].str.upper()
+
+
+
+import pandas as pd
+
+data = {
+    "product": ["Laptop", "Phone", "Tablet", "Monitor", "Keyboard"],
+    "region": ["Istanbul", "Ankara", "Istanbul", "Izmir", "Ankara"],
+    "sales": [1500, 800, 1200, 600, 300]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+
+
+
+
+result = df[df["region"] != "Ankara"]
+print(result)
+result = df[df["region"].isin(["Istanbul", "Ankara"])]
+
+print(result)
+
+#sorting data
+
+sorted_df = df.sort_values("sales")
+print(sorted_df)
+
+#sorting  data from  high to low
+sorted_df = df.sort_values("sales", ascending=False)
+print(sorted_df)
+
+#sorting by several column :
+
+result = df.sort_values(["region", "sales"], ascending=[True, False])
+print(result)
+
+#real example
+result = df[ 
+    (df["region"] == "Istanbul") & 
+    (df["sales"] > 1000)
+].sort_values("sales", ascending=False)
+print(result)
+
+print(df[df["sales"] > 5000])
+print(df[df["sales"] == "Istanbul"])
+print(df.sort_values("sales", ascending=False).head(10))
+
+#best salse of region:
+print(df[df["region"] == "Istanbul"].sort_values(["sales"], ascending=False))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

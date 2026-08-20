@@ -47,7 +47,7 @@ class Datasetprocessor:
              if score >= 50]
 
 
-processor = Datasetprocessor.load("week2/day7/dataset.txt")
+processor = Datasetprocessor.load("week2/day7/dataset.txt") # type: ignore
 processor.process()
 print(processor.exellent())
 status = ["pass" if score >= 50 else "fail"
