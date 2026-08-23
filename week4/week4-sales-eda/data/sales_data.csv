@@ -1,0 +1,21 @@
+order_id,customer_id,region,product,sales,quantity
+1001,1,Dubaii,Phone,1200,2
+1002,2,Dubai,Laptop,2500,1
+1003,3,Sharjah,phone,900,1
+1004,4,Abu Dhabi,Tablet,1800,2
+1005,5,NONE,Laptop,3200,1
+1006,6,Sharjah ,Phone,1100,2
+1007,7,Abu Dhabi,Laptop,2800,1
+NONE,8,Dubai,Phone,1400,2
+1009,9,Sharjah,TABLET,1600,1
+1010,10,Dubai,Laptop,2700,1
+1011,1,Dubai,Phone,NONE,2
+1012,2,Dubai,Tablet,1900,1
+1013,3,Sharjah,Laptop,2600,1
+1014,4,Abu Dhabi,Phone,1500,2
+1015,5,Dubai,Tablet,unknown,1
+1016,6,Sharjah,Laptop,3000,-1
+1017,7,Abu Dhabi,Phone,1700,2
+1018,8,Dubai,Laptop ,-2900,1
+1019,9,Sharjah,Phone,1250,2
+1020,10,Dubai,Tablet,2000,1
