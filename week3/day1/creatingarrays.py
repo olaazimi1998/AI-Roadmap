@@ -4,10 +4,10 @@ result = []
 
 for x in numbers:
 
-    result.append(x * 2)
+    result.append(x * 2) # type: ignore
 
 
-print(result)
+print(result) # type: ignore
 
 print("\n")
 #creating arrays
@@ -35,8 +35,8 @@ print(matrix[0][2])
 numbers = [1,2,3,4,5]
 result =[]
 for x in numbers:
-    result.append(x * 2)
-print(result)
+    result.append(x * 2) # type: ignore
+print(result) # type: ignore
 
 #use:
 numbers = np.array([1,2,3,4,5])
