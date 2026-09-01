@@ -17,12 +17,18 @@
 #Chain Rule
 #
 #ارتباط آن‌ها با آموزش مدل‌های ML
+#0       → impossible
+#0.5     → 50% chance
+#1       → certain
+#Probability of getting Head from a
+#  fair coin = 0.5
+#1 2 3 4 5 6
+#P(6) = 1/6
+#0.1667
+#16%
 
 
-
-
-
-
+#
 
 
 

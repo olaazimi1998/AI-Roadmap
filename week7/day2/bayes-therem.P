@@ -1,0 +1,110 @@
+#P(A∣B)=P(B)P(B∣A)P(A)​
+#P(B|A)
+#Likelihood
+#
+#اگر A واقعاً اتفاق افتاده باشد، احتمال دیدن B چقدر است؟
+#
+#P(B)
+#Evidence
+#
+#احتمال مشاهده B به‌طور کلی.
+#
+#P(A|B)
+#Posterior Probability
+#
+#بعد از دیدن B، احتمال A چقدر شده است؟
+#
+
+فرض کن یک سیستم پزشکی داریم.
+
+یک بیماری خاص فقط در 1% افراد وجود دارد.
+
+پس:
+
+#P(Disease)=0.01
+#حالا یک تست پزشکی داریم.
+#
+#اگر شخص بیمار باشد، تست در 90% موارد مثبت می‌شود:
+#
+#P(Positive∣Disease)=0.90
+#اما تست ممکن است برای افراد سالم هم اشتباهاً مثبت شود.
+#
+#فرض کنیم:
+#
+#P(Positive∣Healthy)=0.05
+#یعنی 5٪ افراد سالم هم نتیجه مثبت می‌گیرند.
+
+
+#P(Disease) = 0.01
+
+#P(Positive | Disease) = 0.90
+
+#P(Positive | Healthy) = 0.05
+
+#P(Disease | Positive)
+
+
+# 100 people → Disease
+# 9900 people → Healthy
+
+#90 sick people → Positive
+# 100 × 0.90 = 90
+
+# 495 healthy people → Positive
+
+# 9900 × 0.05 = 495
+
+
+# 90 sick + 495 healthy= 585 positive
+
+#پس:
+#
+#P(Disease∣Positive)= 
+# 585
+#90
+#​
+# 
+#تقریباً:
+#
+#0.154
+#یعنی:
+#
+#15.4%
+#Bayes' Theorem helps us update the probability of a hypothesis when we receive new evidence.
+
+#و فارسی:
+
+#قضیه بیز به ما کمک می‌کند وقتی اطلاعات جدید دریافت می‌کنیم، احتمال یک فرضیه را به‌روزرسانی کنیم.#
+#P(Positive | Disease) = 0.90
+#P(Positive | Healthy) = 0.10
+
+#P(Disease) = 0.02
+#P(Health) = 0.98
+
+# (0.90 * 0.2) + (0.10 * 0.98) = 0.116
+#0.18 /  0.116 = 0.115
+# 15%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

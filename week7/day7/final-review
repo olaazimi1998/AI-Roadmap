@@ -1,0 +1,26 @@
+#Spam = 80%
+#Not Spam = 20%
+
+#P(Purchase | Customer opened email)
+
+#Prior belief
+#     ↓
+#New Evidence
+#     ↓
+#Updated belief
+#Derivative = rate of change
+
+#gradient
+#Weight 1 → gradient = -2.4
+#Weight 2 → gradient = +0.8
+#Weight 3 → gradient = -1.1
+
+
+#gradient decent
+
+#chain rule
+#backpropagation
+
+
+
+
