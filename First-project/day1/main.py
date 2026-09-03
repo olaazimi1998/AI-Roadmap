@@ -20,7 +20,16 @@ elif stock < 10:
 else:
     print("Status: In stock")
 
-phones = [{"name": "iphone 15 pro", "stock": 5, "Brand": "Apple"},
+from typing import TypedDict
+
+
+class Phone(TypedDict):
+    name: str
+    stock: int
+    Brand: str
+
+
+phones: list[Phone] = [{"name": "iphone 15 pro", "stock": 5, "Brand": "Apple"},
           {"name": "iphone 16 pro", "stock": 6, "Brand": "Apple"},
           {"name": "iphone 14 pro", "stock": 3, "Brand": "Apple"}]
 while True:
@@ -53,7 +62,7 @@ print("Shop location", shop_location)
 search = input("Search Phone:").lower()
 found = False
 for phone in phones:
-    if search in phone["name"].lowe():
+    if search in phone["name"].lower():
         print("Found", phone["name"],
                   "-",
          phone["sell_price"], "AED")

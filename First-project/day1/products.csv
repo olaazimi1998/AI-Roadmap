@@ -1,11 +1,11 @@
-name,brand,buy_price,sell_price,stock
-iphone 15 pro,Apple,800,999,5
-iphone 16 pro,Apple,900,1099,6
-iphone 14 pro,Apple,700,899,3
-Samsung Galaxy S24,Samsung,650,799,8
-Samsung Galaxy A15,Samsung,400,549,12
-Google Pixel 9,Google,750,899,4
-Google Pixel 8,Google,650,799,7
-OnePlus 13,OnePlus,550,699,10
-Xiaomi 14,Xiaomi,500,649,9
-Oppo A78,Oppo,300,449,15
+name,brand,buy_price,sell_price,stock,profit
+iphone 15 pro,Apple,800,999,5,995
+iphone 16 pro,Apple,900,1099,6,1194
+iphone 14 pro,Apple,700,899,3,597
+Samsung Galaxy S24,Samsung,650,799,8,1192
+Samsung Galaxy A15,Samsung,400,549,12,1788
+Google Pixel 9,Google,750,899,4,596
+Google Pixel 8,Google,650,799,7,1043
+OnePlus 13,OnePlus,550,699,10,1490
+Xiaomi 14,Xiaomi,500,649,9,1341
+Oppo A78,Oppo,300,449,15,2235
