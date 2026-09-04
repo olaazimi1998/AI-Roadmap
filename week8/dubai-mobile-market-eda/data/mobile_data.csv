@@ -1,0 +1,19 @@
+brand,model,price,ram_gb,storage_gb,rating
+Apple,iPhone 13,2299,4,128,4.7
+Apple,iPhone 14,2799,6,128,4.6
+Apple,iPhone 15,3299,6,128,4.8
+Apple,iPhone 15 Pro,4299,8,256,4.9
+Samsung,Galaxy S22,2199,8,128,4.5
+Samsung,Galaxy S23,2699,8,256,4.7
+Samsung,Galaxy S24,3199,8,256,4.8
+Samsung,Galaxy S24 Ultra,4499,12,512,4.9
+Xiaomi,Redmi Note 12,799,6,128,4.3
+Xiaomi,Redmi Note 13,999,8,256,4.4
+Xiaomi,14,2499,12,256,4.6
+Xiaomi,14 Ultra,3499,16,512,4.8
+OnePlus,OnePlus 10,1899,8,128,4.4
+OnePlus,OnePlus 11,2399,12,256,4.6
+OnePlus,OnePlus 12,2999,16,512,4.8
+Google,Pixel 7,1999,8,128,4.5
+Google,Pixel 8,2499,8,128,4.6
+Google,Pixel 8 Pro,3499,12,256,4.8
