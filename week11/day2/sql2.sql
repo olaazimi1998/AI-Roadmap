@@ -45,3 +45,14 @@ LIMIT 3
 #ORDER BY COLUMN
 #LIMIT row_number;
 
+#SELECT
+#    users.name,
+#    products1.name,
+#    orders.quantity
+#FROM users
+#JOIN orders
+#    ON users.id = orders.user_id
+#JOIN products
+#    ON products.id = orders.product_id;
+
+
