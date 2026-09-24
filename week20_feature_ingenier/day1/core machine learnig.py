@@ -70,14 +70,39 @@ print("Lower:", lower_bound)
 print("Upper:", upper_bound)
 
 
+outliers = df[
+    (df["salary"] < lower_bound) |
+    (df["salary"] > upper_bound)
+]
+
+print("Outliers:")
+print(outliers)
 
 
+import numpy as np
+
+df["log_salary"] = np.log1p(df["salary"])
+
+print(df)
 
 
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
+data = {
+    "age": [20, 25, 30, 35, 40],
+    "salary": [2000, 3000, 5000, 8000, 10000]
+}
 
+df = pd.DataFrame(data)
 
+scaler = StandardScaler()
 
+df[["age", "salary"]] = scaler.fit_transform(
+    df[["age", "salary"]]
+)
+
+print(df)
 
 
 
