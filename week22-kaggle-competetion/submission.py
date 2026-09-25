@@ -24,7 +24,7 @@ def add_features(df):
     df['CabinKnown'] = df['Cabin'].notna().astype(int)
     df['FareBin'] = pd.qcut(df['Fare'].fillna(df['Fare'].median()), 4, labels=False)
     df['Title'] = df['Name'].apply(
-        lambda x: re.search(r',\s*([^\.]+)\.', x).group(1)
+        lambda x: re.search(r',\s*([^\.]+)\.', x).group(1) # type: ignore
         if re.search(r',\s*([^\.]+)\.', x)
         else 'Other'
     )
@@ -116,8 +116,9 @@ for name, model in models.items():
 
 print(f'Best model selected: {best_model_name} ({best_score:.4f})')
 
+assert best_model is not None
 best_model.fit(X, y)
-preds = best_model.predict(X_test).astype(int)
+preds = pd.Series(best_model.predict(X_test)).astype(int).to_numpy()
 
 submission = pd.DataFrame({
     'PassengerId': test['PassengerId'],
