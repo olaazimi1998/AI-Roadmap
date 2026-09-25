@@ -1,41 +1,57 @@
-from fastapi import FastAPI
+from pathlib import Path
+
 import joblib
 import pandas as pd
+from fastapi import FastAPI, Query
 
-app = FastAPI(
-    title="Employee salary Prediction API"
-)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+MODEL_PATH = PROJECT_ROOT / "models" / "salary_model.pkl"
+FEATURE_COLUMNS = ["age", "experience", "education", "joblevel", "country"]
 
-model = joblib.load(
-    "models/salary_model.pkl"
-)
+app = FastAPI(title="Employee salary Prediction API")
+
+
+def load_model():
+    if not MODEL_PATH.exists():
+        import sys
+
+        sys.path.append(str(PROJECT_ROOT))
+        from src.preprocessing import train_and_evaluate
+
+        train_and_evaluate()
+
+    return joblib.load(MODEL_PATH)
+
+
+model = load_model()
+
 
 @app.get("/")
 def home():
-    return{
+    return {"message": "Employee Salary prediction API"}
 
-        "messege": "Employee Salary prediction API"
-    }
-@app.post("/predict")
+
+@app.get("/predict")
 def predict(
-    age: int,
-    experience: int,
-    education: str
-
+    age: int = Query(..., description="Employee age"),
+    experience: int = Query(..., description="Years of experience"),
+    country: str = Query(..., description="Employee country"),
+    education: str = Query(..., description="Education level"),
+    joblevel: str = Query("Mid", description="Job level (default: Mid)"),
 ):
-
-    data = pd.DataFrame([
-        {
+    data = pd.DataFrame(
+        [{
             "age": age,
             "experience": experience,
-            "education": education
-        
-        }
-    ])
-
+            "education": education,
+            "joblevel": joblevel,
+            "country": country,
+        }],
+        columns=FEATURE_COLUMNS,
+    )
     prediction = model.predict(data)
 
-    return {
-        "predicted_salary": float(prediction[0])
-    }
-#uvicorn api.main:app --reload
+    return {"predicted_salary": float(prediction[0])}
+
+
+# uvicorn api.main:app --reload
