@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torchvision.transforms as transforms
+from pathlib import Path
 
 from torch.utils.data import DataLoader
 from torchvision.datasets import FashionMNIST
@@ -14,15 +15,18 @@ transform = transforms.Compose([
     transforms.ToTensor()
 ])
 
+project_dir = Path(__file__).resolve().parent
+data_dir = project_dir / "data"
+
 train_dataset = FashionMNIST(
-    root="data",
+    root=data_dir,
     train=True,
     download=True,
     transform=transform
 )
 
 test_dataset = FashionMNIST(
-    root="data",
+    root=data_dir,
     train=False,
     download=True,
     transform=transform
@@ -78,5 +82,5 @@ for epoch in range(num_epochs):
 
 torch.save(
     model.state_dict(),
-    "models/cnn.pth"
+    project_dir / "models" / "cnn.pth"
 )
