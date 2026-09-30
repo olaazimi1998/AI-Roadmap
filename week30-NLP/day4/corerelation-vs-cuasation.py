@@ -14,10 +14,11 @@ group_a = [70, 72, 68, 75, 71]
 group_b = [80, 82, 79, 85, 81]
 
 result = ttest_ind(group_a, group_b)
-print("t-statistic:", result.statistic)
-print("p-value:", result.pvalue)
+t_statistic, p_value = result
+print("t-statistic:", t_statistic)
+print("p-value:", p_value)
 
-if result.pvalue < 0.05:
+if p_value < 0.05: # type: ignore
     print("Evidence against the null hypothesis.")
 else:
     print("Not enough evidence against the null hypothesis.")
