@@ -1,5 +1,5 @@
 from classifier import analyze_sentiment
-from generator import generate_text
+from genarator import generate_text
 from question_answering import answer_question
 
 
