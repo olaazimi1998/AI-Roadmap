@@ -1,0 +1,14 @@
+{
+  "samples": 150,
+  "feature_count": 4,
+  "target_names": [
+    "setosa",
+    "versicolor",
+    "virginica"
+  ],
+  "class_distribution": {
+    "setosa": 50,
+    "versicolor": 50,
+    "virginica": 50
+  }
+}

@@ -1,0 +1,9 @@
+artifact_location: file:///C:/Users/olaaz/Documents/AI%20Roadmap/week36-mlflow/MLFLOW-project/mlruns/637523197546732335
+creation_time: 1791381650925
+effective_trace_archival_retention: null
+experiment_id: '637523197546732335'
+last_update_time: 1791381650925
+lifecycle_stage: active
+name: Iris Classification
+trace_location: null
+workspace: default

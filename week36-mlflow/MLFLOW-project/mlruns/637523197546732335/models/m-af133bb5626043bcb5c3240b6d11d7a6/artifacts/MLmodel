@@ -1,0 +1,24 @@
+artifact_path: file:///C:/Users/olaaz/Documents/AI%20Roadmap/week36-mlflow/MLFLOW-project/mlruns/637523197546732335/models/m-af133bb5626043bcb5c3240b6d11d7a6/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.14.6
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.0
+    skops_trusted_types:
+    - sklearn.tree._tree.Tree
+mlflow_version: 3.17.0
+model_id: m-af133bb5626043bcb5c3240b6d11d7a6
+model_size_bytes: 1833853
+model_uuid: m-af133bb5626043bcb5c3240b6d11d7a6
+prompts: null
+run_id: 1331d6894469489fbe032a6f2596c37b
+utc_time_created: '2026-10-07 14:00:52.963359'
