@@ -49,7 +49,7 @@ with mlflow.start_run(run_name="iris-rf-baseline") as run:
 
     mlflow.log_metric("accuracy", accuracy)
 
-    mlflow.sklearn.log_model(
+    mlflow.sklearn.log_model( # type: ignore
         model,
         artifact_path="random_forest_model",
         registered_model_name="IrisRandomForest",
