@@ -84,3 +84,22 @@ README + GitHub
                  │
                  ▼
              Versioning
+
+## Run and view the model
+
+Run the training script from this directory:
+
+```bash
+python main.py
+```
+
+The script stores tracking data in `mlflow.db` in this directory and registers
+the model as `IrisRandomForest`. Start the UI against that same database:
+
+```bash
+python -m mlflow ui --backend-store-uri "sqlite:///C:/path/to/week36-mlflow/day1/mlflow.db"
+```
+
+Replace the path with the absolute path to this project's `mlflow.db`. The run's
+model files are under the run's **Artifacts**; the registered version is under
+**Models** in the UI.

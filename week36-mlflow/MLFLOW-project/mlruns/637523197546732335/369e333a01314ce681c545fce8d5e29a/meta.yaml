@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/olaaz/Documents/AI%20Roadmap/week36-mlflow/MLFLOW-project/mlruns/637523197546732335/369e333a01314ce681c545fce8d5e29a/artifacts
+end_time: 1791429361169
+entry_point_name: ''
+experiment_id: '637523197546732335'
+lifecycle_stage: active
+run_id: 369e333a01314ce681c545fce8d5e29a
+run_name: iris-rf-baseline
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1791429355267
+status: 3
+tags: []
+user_id: olaaz

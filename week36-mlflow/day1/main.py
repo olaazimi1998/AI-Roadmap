@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import mlflow
 import mlflow.sklearn
 
@@ -20,10 +22,12 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 
+tracking_uri = "sqlite:///C:/path/to/week36-mlflow/day1/mlflow.db"
+mlflow.set_tracking_uri(tracking_uri)
 mlflow.set_experiment("Iris Classification")
 
 
-with mlflow.start_run():
+with mlflow.start_run(run_name="iris-rf-baseline") as run:
 
     n_estimators = 100
     max_depth = 5
@@ -47,9 +51,12 @@ with mlflow.start_run():
 
     mlflow.sklearn.log_model(
         model,
-        "random_forest_model"
+        artifact_path="random_forest_model",
+        registered_model_name="IrisRandomForest",
+        skops_trusted_types=["sklearn.tree._tree.Tree"],
     )
 
-    print("Accuracy:", accuracy)
-
-    #python -m mlflow ui
+    print("Run ID:", run.info.run_id)
+    print("Tracking URI:", tracking_uri)
+    print("Accuracy:", accuracy)   
+    # python -m mlflow ui --backend-store-uri "sqlite:///C:/path/to/week36-mlflow/day1/mlflow.db"

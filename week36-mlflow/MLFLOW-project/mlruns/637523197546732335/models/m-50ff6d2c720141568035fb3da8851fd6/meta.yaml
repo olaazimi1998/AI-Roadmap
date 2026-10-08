@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/olaaz/Documents/AI%20Roadmap/week36-mlflow/MLFLOW-project/mlruns/637523197546732335/models/m-50ff6d2c720141568035fb3da8851fd6/artifacts
+creation_timestamp: 1791429355493
+experiment_id: '637523197546732335'
+last_updated_timestamp: 1791429361162
+model_id: m-50ff6d2c720141568035fb3da8851fd6
+model_type: null
+name: random_forest_model
+source_run_id: 369e333a01314ce681c545fce8d5e29a
+status: 2
+status_message: null

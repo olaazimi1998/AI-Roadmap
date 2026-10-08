@@ -1,10 +1,10 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.defaultEnvManager": "ms-python.python:venv",
     "python.analysis.autoImportCompletions": true,
     "python-envs.pythonProjects": [
         {
             "path": "week8/dubai-mobile-market-eda",
-            "envManager": "ms-python.python:system",
+            "envManager": "ms-python.python:venv",
             "packageManager": "ms-python.python:pip"
         }
     ],
