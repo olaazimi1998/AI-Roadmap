@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 try:
     from dotenv import load_dotenv
@@ -7,22 +8,31 @@ except ImportError:
         return False
 
 try:
-    from openai import OpenAI
+    from google import genai
 except ImportError:
-    OpenAI = None
+    genai = None
 
-load_dotenv()
+ENV_PATH = Path(__file__).resolve().parent / ".env"
+load_dotenv(ENV_PATH)
 
-if OpenAI is None:
+api_key = os.getenv("GEMINI_API_KEY")
+
+if genai is None or not api_key:
     client = None
 else:
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = genai.Client(api_key=api_key)
 
 
 def ask_llm(prompt):
-    response = client.responses.create(
-        model="gpt-4.1-mini",
-        input=prompt,
-    )
+    if client is None:
+        raise RuntimeError(
+            "Gemini client is unavailable. Install the 'google-genai' package and set the GEMINI_API_KEY environment variable."
+        )
 
-    return response.output_text
+    response = client.models.generate_content(
+        model="gemini-3.8-flash",
+        contents=prompt,
+    )
+    if response.text is None:
+        raise ValueError("The Gemini response did not include text output.")
+    return response.text
