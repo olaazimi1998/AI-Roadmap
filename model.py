@@ -6,3 +6,6 @@ class HousePriceModel:
         price = size * 1000
 
         return price
+
+
+#git init, git add .,git commit -m "Build ML model with automated tests"
