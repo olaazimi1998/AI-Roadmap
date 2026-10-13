@@ -1,0 +1,24 @@
+artifact_path: file:C:/Users/olaaz/Documents/AI Roadmap/mlruns/1/models/m-7395efeb47ff493d9404a3e1f48d0f5d/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.13.15
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types:
+    - sklearn.tree._tree.Tree
+mlflow_version: 3.17.0
+model_id: m-7395efeb47ff493d9404a3e1f48d0f5d
+model_size_bytes: 1833853
+model_uuid: m-7395efeb47ff493d9404a3e1f48d0f5d
+prompts: null
+run_id: 21c519049af947019e6e1e58e82d0141
+utc_time_created: '2026-10-08 03:11:39.650177'

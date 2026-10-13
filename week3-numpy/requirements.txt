@@ -1,0 +1,46 @@
+import numpy as np
+
+# Array
+np.array()
+
+# Creation
+np.zeros()
+np.ones()
+np.arange()
+
+# Shape
+array.shape
+array.ndim
+
+# Reshape
+array.reshape()
+
+# Indexing
+array[0]
+array[0, 1]
+
+# Slicing
+array[1:4]
+
+# Math
+np.sum()
+np.mean()
+np.max()
+np.min()
+np.std()
+
+# Vectorization
+array * 10
+array + 5
+
+# Filtering
+array[array > 50]
+
+# Broadcasting
+matrix + vector
+
+# Matrix multiplication
+A @ B
+
+# Dot product
+np.dot(A, B)
