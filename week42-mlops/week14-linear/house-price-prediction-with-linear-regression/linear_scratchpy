@@ -1,0 +1,76 @@
+
+#|size  | price   |
+#| ---: | ------: |
+#|  800 | 200,000 |
+#| 1000 | 250,000 |
+#| 1200 | 300,000 |
+#| Size |   Price |
+#| 1500 | 375,000 |
+#| 1800 | 450,000 |
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# dataset
+X = np.array([800, 1000, 1200, 1500, 1800], dtype=float)
+y = np.array([200000, 250000, 300000, 375000, 450000], dtype=float)
+
+# normalize for stable gradient descent
+X_mean = X.mean()
+X_std = X.std()
+y_mean = y.mean()
+y_std = y.std()
+
+X_norm = (X - X_mean) / X_std
+y_norm = (y - y_mean) / y_std
+
+# model parameter
+w = 0.0
+b = 0.0
+
+learning_rate = 0.05
+epochs = 20000
+n = len(X_norm)
+
+# training
+for _ in range(epochs):
+    y_pred = w * X_norm + b
+    error = y_pred - y_norm
+
+    dw = (2 / n) * np.sum(X_norm * error)
+    db = (2 / n) * np.sum(error)
+
+    w = w - learning_rate * dw
+    b = b - learning_rate * db
+
+# convert back to original scale
+slope = (w * y_std) / X_std
+intercept = y_mean - slope * X_mean
+
+# prediction
+house_size = 1600
+prediction = slope * house_size + intercept
+
+print("Weight:", slope)
+print("Bias:", intercept)
+print("House size:", house_size)
+print("Predicted price:", prediction)
+
+# plot the training data and regression line
+sns.set_theme(style="whitegrid")
+
+x_line = np.linspace(X.min(), X.max(), 100)
+y_line = slope * x_line + intercept
+
+plt.figure(figsize=(9, 5))
+sns.scatterplot(x=X, y=y, color="royalblue", s=100, label="Training data")
+sns.lineplot(x=x_line, y=y_line, color="crimson", linewidth=2, label="Linear regression")
+plt.scatter([house_size], [prediction], color="darkgreen", s=120, label=f"Prediction: ${prediction:,.0f}")
+plt.title("House Price Prediction")
+plt.xlabel("House Size (sq ft)")
+plt.ylabel("Price ($)")
+plt.legend()
+plt.tight_layout()
+plt.show()

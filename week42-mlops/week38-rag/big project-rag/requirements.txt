@@ -1,0 +1,9 @@
+sentence-transformers==5.7.0
+huggingface-hub==0.36.2
+faiss-cpu
+numpy
+pypdf
+fastapi>=0.115,<0.116
+uvicorn[standard]
+python-multipart
+httpx
