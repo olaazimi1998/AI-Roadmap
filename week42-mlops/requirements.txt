@@ -1,5 +1,8 @@
 fastapi
 uvicorn[standard]
 pydantic
+scikit-learn
+mlflow
+joblib
 pytest
 httpx
